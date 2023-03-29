@@ -1,63 +1,224 @@
 html{
-    font-size: 16px;
+    font-size: 14px;
 }
+
 body{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     color: #444444;
 }
 
-h2,h3,h4,h5,h6{
-    font-family: 'Roboto';
-    font-weight: 500;
-    color: #222222;
-}
-h1{
-    text-align: center;
-    color: indigo;
-    font-size: 2.5rem;
-    font-family: 'Roboto';
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: #222222;
 }
+h1{text-align: center;font-size: 2.5rem;}
 h2{font-size: 2rem;}
 h3{font-size: 1.75rem;}
 h4{font-size: 1.5rem;}
 h5{font-size: 1.25rem;}
 h6{font-size: 1rem;}
 
-#banner {
-    width: 100%;
-    object-fit: cover;
+a{
+    text-decoration: none;
+    color: #3B82F6;
 }
 
-#about{
-    display: flex;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 8px;
+a:hover, a:focus{
+    color: #1D4ED8;
 }
-#description{
-    width: 50%;
-    padding-right: 8px;
-    font-size: 1.25rem;
-}
-#team{
-    width: 50%;
-}
+
 #navbar{
     padding: 8px;
     margin: 0px;
 }
-#logo{
-    height: 30px;
+#logo-with-text{
+    display: none;
+}
+#banner {
+    object-fit: cover;
+    width: 100%;
+    height: 120px;
+}
+
+#about{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 8px;
 }
 #team-image{
     border-radius: 5px;
     width: 100%;
 }
+#jobs{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+.job{
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+.job-title{
+    font-size: 1.25em;
+    color: #222222;
+    font-weight: 500;
+}
+.job-detail{
+    color: #777777;
+    margin-top: 2px;
+}
+.jobs-table{
+    display: none;
+}
+
+#application{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+.form-group{
+    margin: 16px 0;
+} 
+#application-form label{
+    font-weight: 600;
+}
+.form-group input, textarea, select{
+    font-size: 1.25rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 4px;
+    padding: 8px;
+    width: 90%;
+}
+.form-group textarea{
+    font-family: 'Roboto', sans-serif;
+}
+.form-group input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+}
+#application-form input[type="submit"]{
+    background-color: #3B82F6;
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+}
+#footer{
+    background-color: #E2E8F0;
+    text-align: center;
+    padding: 8px;
+    margin-top: 32px;
+}
+#footer-link{
+    list-style: none;
+    padding: 0;
+}
+#footer-link li{
+    margin: 8px 0;
+}
+.copyright{
+    color: #71717A;
+    font-size: 0.875rem;
+}
+
+@media screen and (min-width: 576px){
+    html{
+        font-size: 16px;
+    }
+
+    #logo{
+        display: none;
+    }
+    #logo-with-text{
+        display: block;
+    }
+    #banner {
+        height: 200px;
+    }
+    #footer-link li{
+        display: inline;
+        margin: 0 16px;
+    }
+}
+
+@media screen and (min-width:768px){
+    #banner {
+        height: 280px;
+    }
+    #about{
+        flex-direction: row;
+        max-width: 800px;
+    }
+    #description{
+        width: 50%;
+        padding-right: 8px;
+        font-size: 1.25rem;
+    }
+    #team{
+        width: 50%;
+    }
+    #jobs{
+        max-width: 800px;
+    }
+    #jobs-list{
+        display: none;
+    }
+    .jobs-table{
+        display: table;
+        width: 100%;
+        border: 1px solid gray;
+        border-collapse: collapse;
+    
+    }
+    .jobs-header-row th {
+        border: 1px solid gray;
+        padding: 8px;
+        background-color: #bfdbfe;
+        text-align: center;
+        color: #222222;
+    }
+    .jobs-data-row td{
+        border: 1px solid gray;
+        padding: 8px;
+    }
+    #jobs-table tr :nth-child(odd) {
+        background-color: #EFF6FF;
+    }
+    #application{
+        max-width: 800px;
+    }
+    .form-group textarea{
+        width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 h2{
     text-align: center;
 }
@@ -73,34 +234,11 @@ h3{
 .apply{
     float: right;
 }
-a{
-    text-decoration: none;
-    color: #3B82F6;
-}
-
-a:hover, a:focus{
-    color: #114328;
-}
-#footer-link{
-    list-style: none;
-}
-#footer{
-    background-color: #FAFAFA;
-    text-align: center;
-    padding: 8px;
-    margin-top: 32px;
-}
 #courses{
     background-color: ghostwhite;
 }
-.copyright{
-    color: #71717A;
-    font-size: 0.875rem;
-}
-#footer-link li{
-    display: inline;
-    margin: 0 16px;
-}
+
+
 .jobs-table{
     width: 100%;
     border: 1px solid gray;
@@ -118,56 +256,4 @@ a:hover, a:focus{
     padding: 8px;
 
 }
-.jobs-table tr:nth-child(odd){
-background-color: #EFF6FF;
-}
-
-#application{
-max-width: 800px;
-margin: 0 auto;
-padding: 0 8px;
-}
-.form-group{
-    margin: 16px 0;
-} 
-
-.form-group input, textarea, select{
-    font-size: 1.25rem;
-    border: 1px solid gray;
-    border-radius: 4px;
-    margin-top: 4px;
-    padding: 8px;
-    min-width: 360px;
-}
-
-.form-group textarea{
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-}
-.form-group input[type="checkbox"]{
-    width: 16px;
-    height: 16px;
-    min-width: 0;
-}
-
-#application-form label{
-    font-weight: bold;
-}
-
-#application-form input[type="submit"]{
-    background-color: #2563EB;
-    /* width: 120px; */
-    min-width: 0;
-    padding: 16px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.25rem;
-    cursor: pointer;
-}
-
-
-@media screen and (min-width: 400px) and (max-width: 600px){
-    body{
-        background: green;
-    }
-}
+*/
