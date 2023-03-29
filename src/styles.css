@@ -164,3 +164,10 @@ padding: 0 8px;
     font-size: 1.25rem;
     cursor: pointer;
 }
+
+
+@media screen and (min-width: 400px) and (max-width: 600px){
+    body{
+        background: green;
+    }
+}
